@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: IMDB info box
-Plugin URI: http://wordpress.org/extend/plugins/imdb-info-box/
-Description: This plugin helps to add movie information (from IMDB) in wordpress post using shortcode [imdb id="imdbmovieid"].
-Version: 1.2
-Author: Sunny Verma
-Author URI: http://99webtools.com
+Plugin Name: IMDB info box en español
+Plugin URI: http://wordpress.org/extend/plugins/imdb-info-box-es/
+Description: This plugin helps to add movie information (from IMDB) in WordPress post using shortcode [imdb id="imdbmovieid"] but in Spanish.
+Version: 1.0
+Author: Rafa Poveda based in the work of Sunny Verma
+Author URI: http://raven.es
 Released under the GNU General Public License (GPL)
 http://www.gnu.org/licenses/gpl.txt
 */
@@ -30,7 +30,8 @@ function file_get_contents_curl($url) {
 function imdb_info_box($a,$c=null,$t){
 extract(shortcode_atts( array(
 		'id' => null,
-		'plot' => 'short',
+		'plot' => 'full',
+        'tomatoes' => 'true'
 	), $a ));
 	if(empty($id))
 	{
@@ -45,10 +46,10 @@ $out='<table id="imdbinfo">
   </tr>
   <tr>
     <td id="imdbimg"><img src="'.$info['Poster'].'" alt="'.$info['Title'].' poster" /></td>
-    <td><b>Rating:</b> '.$info['imdbRating'].'/10 ('.$info['imdbVotes'].' votes)<br><b>Director:</b> '.$info['Director'].'<br><b>Writer:</b> '.$info['Writer'].'<br><b>Stars:</b> '.$info['Actors'].'<br><b>Runtime:</b> '.$info['Runtime'].'<br><b>Rated:</b> '.$info['Rated'].'<br><b>Genre:</b> '.$info['Genre'].'<br><b>Released:</b> '.$info['Released'].'</td>
+    <td><b>Calificación:</b> '.$info['imdbRating'].'/10 ('.$info['imdbVotes'].' votes)<br><b>Director:</b> '.$info['Director'].'<br><b>Escrito por:</b> '.$info['Writer'].'<br><b>Protagonistas:</b> '.$info['Actors'].'<br><b>Longitud:</b> '.$info['Runtime'].'<br><b>Calificación:</b> '.$info['Rated'].'<br><b>Géneros:</b> '.$info['Genre'].'<br><b>Fecha de estreno:</b> '.$info['Released'].'</td>
   </tr>
   <tr>
-    <td colspan="2"><b>Plot:</b> '.$info['Plot'].'</td>
+    <td colspan="2"><b>Trama:</b> '.$info['Plot'].'</td>
   </tr>
 </table>';
 }
