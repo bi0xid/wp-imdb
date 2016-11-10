@@ -1,15 +1,15 @@
 === IMDB Info Box===
 
-Contributors: sunnyverma1984
-Donate link: http://99webtools.com/blog/contribute/
+Contributors: bi0xid
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BDUEBSM9QRPDU
 Tags: imdb, movie, shortcode, cinema, film, 
 Requires at least: 2.8
-Tested up to: 3.9.1
-Stable tag: 1.2
+Tested up to: 4.6
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Display movie information from IMDB in wordpress post.
+Display movie information from IMDB in WordPress post.
 
 == Description ==
 This plugin helps to add movie information (from IMDB) in wordpress post using shortcode [imdb id="imdbmovieid"].
