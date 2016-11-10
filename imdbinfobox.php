@@ -31,7 +31,6 @@ function imdb_info_box($a,$c=null,$t){
 extract(shortcode_atts( array(
 		'id' => null,
 		'plot' => 'full',
-        'tomatoes' => 'true'
 	), $a ));
 	if(empty($id))
 	{
